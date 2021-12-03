@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_form_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.form.view.inherit</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[1]" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', '|',('state', 'in', ('draft', 'cancel', 'done', 'to_close')), ('qty_producing', '=', 0), '&amp;', ('mrp_production_child_count', '>', 0),  ('mo_childs_done', '=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//button[2]" position="attributes">
+                        <attribute name="attrs">{'invisible': ['|', '&amp;','|', ('state', 'not in', ('confirmed', 'progress')),
+                        ('qty_producing', '!=', 0),
+                        ('state', '!=', 'to_close'), '&amp;', ('mrp_production_child_count', '>', 0), ('mo_childs_done', '=', False)]}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_mark_done']" position="after">
+                <field name="mo_childs_done" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

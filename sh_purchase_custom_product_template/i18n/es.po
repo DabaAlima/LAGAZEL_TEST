@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_purchase_custom_product_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-20 13:30+0000\n"
+"PO-Revision-Date: 2020-10-20 13:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__templ_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__company_id
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__create_uid
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__create_date
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.actions.act_window,name:sh_purchase_custom_product_template.action_purchase_template_product
+#: model:ir.ui.menu,name:sh_purchase_custom_product_template.menu_purchase_template_product
+msgid "Custom Product Template"
+msgstr "Plantilla de producto personalizada"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__display_name
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_order__id
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__id
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__id
+msgid "ID"
+msgstr "CARNÉ DE IDENTIDAD"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template____last_update
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__write_uid
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__write_date
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__ordered_qty
+msgid "Ordered Qty"
+msgstr "Cantidad ordenada"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__name
+msgid "Product"
+msgstr "Producto"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_order__product_template_id
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model,name:sh_purchase_custom_product_template.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de compra"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model,name:sh_purchase_custom_product_template.model_purchase_product_template
+msgid "Purchase Product Template"
+msgstr "Comprar plantilla de producto"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model,name:sh_purchase_custom_product_template.model_purchase_product_template_line
+msgid "Purchase Product Template Line"
+msgstr "Línea de plantilla de producto de compra"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__name
+#: model_terms:ir.ui.view,arch_db:sh_purchase_custom_product_template.sh_purchase_template_product_form_view
+msgid "Template"
+msgstr "Modelo"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__unit_price
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__product_uom
+msgid "Uom"
+msgstr "Uom"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template__purchase_product_template_ids
+msgid "purchase Product Line"
+msgstr "comprar línea de productos"
+
+#. module: sh_purchase_custom_product_template
+#: model:ir.model.fields,field_description:sh_purchase_custom_product_template.field_purchase_product_template_line__purchase_template_id
+msgid "purchase Template Id"
+msgstr "ID de plantilla de compra"

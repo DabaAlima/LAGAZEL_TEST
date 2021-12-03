@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_template_product_form_view_inherit" model="ir.ui.view">
+        <field name="name">purchase.template.product.form.view.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <field name="date_order" position="after">
+                <field name="product_template_id" domain="[('templ_active','=',True)]" options="{'no_create_edit': True}" />
+            </field>
+        </field>
+    </record>
+    <record id="purchase_requisition_template_product_form_view_inherit" model="ir.ui.view">
+        <field name="name">purchase.requisition.template.product.form.view.inherit</field>
+        <field name="model">purchase.requisition</field>
+        <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form" />
+        <field name="arch" type="xml">
+            <field name="vendor_id" position="after">
+                <field name="product_template_id" domain="[('templ_active','=',True)]" options="{'no_create_edit': True}" />
+            </field>
+        </field>
+    </record>
+    <record id="stock_picking_template_product_form_view_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.template.product.form.view.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="product_template_id" domain="[('templ_active','=',True)]" options="{'no_create_edit': True}" />
+            </field>
+        </field>
+    </record>
+
+    <record id="sh_purchase_template_product_form_view" model="ir.ui.view">
+        <field name="name">Product Template Form</field>
+        <field name="model">purchase.product.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="create_purchase_orders_by_vendor" type="object"
+                    string="Nouveaux Devis" class="btn-primary"
+                    attrs="{'invisible': [('id', '=', False)]}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="kit_id" widget="many2many_tags"/>
+                        <field name="kit_number"/>
+                        <field name="product_template_qty"/>
+                        <field name="templ_active" />
+                        <field name="company_id" invisible="1" />
+                    </group>
+                    <notebook>
+                        <page string="Template">
+                            <field name="purchase_product_template_ids">
+                                <tree editable="bottom">
+                                    <field name="company_id" invisible="1" />
+                                    <field name="name" />
+                                    <field name="description" />
+                                    <field name="ordered_qty" />
+                                    <field name="unit_price" />
+                                    <field name="product_uom" />
+                                    <field name="supplier_id" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="sh_purchase_template_product_tree_view" model="ir.ui.view">
+        <field name="name">Product Template Tree</field>
+        <field name="model">purchase.product.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="templ_active" />
+            </tree>
+        </field>
+    </record>
+    <record id="action_purchase_template_product" model="ir.actions.act_window">
+        <field name="name">Custom Product Template</field>
+        <field name="res_model">purchase.product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="type">ir.actions.act_window</field>
+    </record>
+    <menuitem id="menu_purchase_template_product" name="Custom Product Template" action="action_purchase_template_product" parent="purchase.menu_procurement_management" sequence="35" groups="purchase.group_purchase_manager" />
+</odoo>
